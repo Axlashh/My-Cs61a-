@@ -8,6 +8,11 @@ def convert_link(link):
     []
     """
     "*** YOUR CODE HERE ***"
+    ans = []
+    while link != Link.empty:
+        ans.append(link.first)
+        link = link.rest
+    return ans
 
 
 def duplicate_link(link, val):
@@ -30,6 +35,13 @@ def duplicate_link(link, val):
     Link(1, Link(2, Link(2, Link(2, Link(2, Link(3))))))
     """
     "*** YOUR CODE HERE ***"
+    a = link
+    while a != Link.empty:
+        if a.first == val:
+            a.rest = Link(a.first,a.rest)
+            a = a.rest.rest
+        else:
+            a = a.rest
 
 
 def cumulative_mul(t):
@@ -46,7 +58,14 @@ def cumulative_mul(t):
     Tree(5040, [Tree(60, [Tree(3), Tree(4), Tree(5)]), Tree(42, [Tree(7)])])
     """
     "*** YOUR CODE HERE ***"
-
+    if not t.is_leaf:
+        return
+    for i in t.branches:
+        cumulative_mul(i)
+    for i in t.branches:
+        t.label *= i.label
+    
+    
 
 def every_other(s):
     """Mutates a linked list so that all the odd-indiced elements are removed
