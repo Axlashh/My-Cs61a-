@@ -1,10 +1,8 @@
 # My-Cs61a-
-  my own code 
-  
-  try 1 try
+my own code 
 
+ant没写 后面大部分optional没写 有几个lab偷懒没写（
 
-换行
 
 记录我cs61a学习过程中所编写的代码
 
@@ -29,5 +27,7 @@
 耶耶耶耶
 
 只写了必须的内容 额外的题目都没写 以后有时间再说（
+
+有时间看还能不能把scheme challenge写了
 
 继续冲！
